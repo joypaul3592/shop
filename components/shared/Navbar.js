@@ -36,7 +36,7 @@ export default function Navbar() {
     return (
         <>
             <div className=' bg-[#FFBB38] z-50 sticky top-0 '>
-                <nav className="container mx-auto px-20  flex  items-center justify-between  transition-all duration-300 ease-in-out">
+                <nav className="container mx-auto xl:px-20 px-5  flex  items-center justify-between  transition-all duration-300 ease-in-out">
 
                     <div className=" flex items-center">
                         <div className={`transition-all  pl-5 py-4 lg:py-0  duration-300 xl:pr-20 pr-3 flex  xl:justify-end ease-in-out cursor-pointer`}>
@@ -57,27 +57,27 @@ export default function Navbar() {
                                         <div className=" flex items-center ">
                                             <Link
                                                 href={'page'}
-                                            ><p className=" py-6  xl:px-5 px-1 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white ">Home</p>
+                                            ><p className=" py-6  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white ">Home</p>
                                             </Link>
                                             <Link
                                                 href={'blog'}
-                                            ><p className=" py-6  xl:px-5 px-1 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">CNG</p>
+                                            ><p className=" py-6  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">CNG</p>
                                             </Link>
                                             <Link
                                                 href={'blog'}
-                                            ><p className=" py-6  xl:px-5 px-1 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">LPG</p>
+                                            ><p className=" py-6  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">LPG</p>
                                             </Link>
                                             <Link
                                                 href={'blog'}
-                                            ><p className=" py-6  xl:px-5 px-1 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">About</p>
+                                            ><p className=" py-6  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">About</p>
                                             </Link>
                                             <Link
                                                 href={'blog'}
-                                            ><p className=" py-6  xl:px-5 px-1 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">Blog</p>
+                                            ><p className=" py-6  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">Blog</p>
                                             </Link>
                                             <Link
                                                 href={'blog'}
-                                            ><p className=" py-6  xl:px-5 px-1 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">Contact</p>
+                                            ><p className=" py-6  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">Contact</p>
                                             </Link>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@ export default function Navbar() {
 
                     {/* Button */}
                     <div>
-                        <button className=" text-[15px] font-semibold text-white py-2 px-6 bg-black flex items-center gap-2 border border-black hover:bg-transparent hover:text-black">
+                        <button className=" hidden  text-[15px] font-semibold text-white py-2 px-6 bg-black sm:flex items-center gap-2 border border-black hover:bg-transparent hover:text-black">
                             Get Products <MdKeyboardArrowRight className="text-lg" /></button>
                     </div>
 
@@ -104,8 +104,8 @@ export default function Navbar() {
                     </div>
 
                     {/* Mobile */}
-                    <div className={`w-full absolute lg:hidden transition-all duration-300 ease-in-out h-screen top-0 bottom-0 left-0 right-0 bg-black opacity-40  ${isMenuOpen ? 'block' : 'hidden'}`}></div>
-                    <div ref={ref} className={`${isMenuOpen ? 'left-0 bottom-0 top-0 z-20 ' : '-left-96 bottom-0 top-0'} transition-all duration-300 ease-in-out fixed lg:hidden  flex flex-col w-full md:w-1/2  max-w-sm py-6 px-6 bg-[#ED6D01]  overflow-y-auto`}>
+                    <div className={`w-full fixed lg:hidden transition-all duration-300 ease-in-out h-screen top-0 bottom-0 left-0 right-0 bg-black opacity-40  ${isMenuOpen ? 'block' : 'hidden'}`}></div>
+                    <div ref={ref} className={`${isMenuOpen ? 'left-0 bottom-0 top-0 z-20 ' : '-left-96 bottom-0 top-0'} transition-all duration-300 ease-in-out fixed lg:hidden  flex flex-col w-full md:w-1/2  max-w-sm py-6 px-6 bg-[#FFBB38]  overflow-y-auto`}>
 
                         <div className="h-full flex flex-col gap-3  items-start pl-1" >
 
@@ -127,30 +127,40 @@ export default function Navbar() {
                                 </Link>
                             </div>
 
-
-                            <div className=' flex flex-col gap-6 md:mt-8 mt-4 text-left'>
-
+                            <div className=' flex flex-col gap-2 md:mt-8 mt-4 text-left'>
                                 <Link
                                     href={'page'}
-                                ><p className=" py-1  xl:px-5 px-1 cursor-pointer rounded-md text-[17px] hover:text-purple-500 text-white ">Distributor</p>
+                                ><p className=" py-2  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white ">Home</p>
                                 </Link>
-
                                 <Link
                                     href={'blog'}
-                                ><p className=" py-1 xl:px-5 px-1 cursor-pointer rounded-md text-[17px] hover:text-purple-500 text-white ">Blog</p>
+                                ><p className=" py-2  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">CNG</p>
                                 </Link>
-
-
-
-
+                                <Link
+                                    href={'blog'}
+                                ><p className=" py-2  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">LPG</p>
+                                </Link>
+                                <Link
+                                    href={'blog'}
+                                ><p className=" py-2  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">About</p>
+                                </Link>
+                                <Link
+                                    href={'blog'}
+                                ><p className=" py-2  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">Blog</p>
+                                </Link>
+                                <Link
+                                    href={'blog'}
+                                ><p className=" py-2  xl:px-5 px-2 cursor-pointer rounded-md text-[15px] font-semibold  text-gray-800 hover:text-white">Contact</p>
+                                </Link>
                             </div>
 
-
+                            {/* Button */}
+                            <div>
+                                <button className=" sm:hidden  text-[15px] font-semibold text-white py-2 px-6 bg-black flex items-center gap-2 border border-black hover:bg-transparent hover:text-black">
+                                    Get Products <MdKeyboardArrowRight className="text-lg" /></button>
+                            </div>
                         </div>
                     </div>
-
-
-
                 </nav >
             </div >
         </>

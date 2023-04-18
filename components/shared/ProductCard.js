@@ -1,7 +1,5 @@
 import Image from 'next/image'
 
-
-
 // Incon Import
 import { AiFillStar } from 'react-icons/ai'
 import { BsHandbag } from 'react-icons/bs'
@@ -55,8 +53,8 @@ export default function ProductCard({ button, progress, pimg, title, oldPrice, n
                     <p className=' text-red-500'>{newPrice}</p>
                 </div>
             </div>
-            <div className=' absolute -bottom-20 group-hover:bottom-3 transition-all duration-300 ease-in-out'>
-                <button className=' py-2.5 px-[5.6rem] flex items-center gap-2 text-[15px] bg-[#FFBB38]'><BsHandbag />Add To Cart</button>
+            <div className=' absolute 2xl:-bottom-20 -bottom-16 left-[10%] group-hover:bottom-3 transition-all duration-300 ease-in-out bg-red-500 w-4/5'>
+                <button className=' py-2.5 w-full flex items-center justify-center gap-2 text-[15px] bg-[#FFBB38]'><BsHandbag />Add To Cart</button>
             </div>
             <div className='absolute group-hover:right-5 -right-20 top-20 flex flex-col gap-3 transition-all duration-300 ease-in-out'>
                 <div className='bg-[#ebebebec] rounded-sm h-10 w-10 flex items-center justify-center text-lg'>

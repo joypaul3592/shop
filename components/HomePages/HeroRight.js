@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import ShopNowBtn from '../shared/ShopNowBtn'
 
-// Image Import
-import hero2 from '../../assect/image/homePage/product.png'
-import hero3 from '../../assect/image/homePage/product.png'
 
+// Image Import
+import product1 from '../../assect/image/homePage/product/product6.png'
+import product2 from '../../assect/image/homePage/product/product2.png'
 
 export default function HeroRight() {
     const heroData = [
         {
             id: 1,
-            img: hero2,
+            img: product1,
             mainBg: 'bg-sky-200',
             btnBg: 'white',
             title1: 'Apple',
@@ -18,7 +18,7 @@ export default function HeroRight() {
         },
         {
             id: 2,
-            img: hero3,
+            img: product2,
             mainBg: 'bg-white',
             btnBg: '[#FFBB38]',
             title1: 'Xbox',
@@ -26,20 +26,20 @@ export default function HeroRight() {
         },
     ]
     return (
-        <div className=" w-1/3 flex flex-col justify-between ">
+        <div className=" lg:w-1/3 sm:flex lg:flex-col justify-between gap-10 lg:gap-0 ">
             {
                 heroData.map(data =>
-                    <div key={data.id} className={` ${data.mainBg} relative py-10 px-7 z-[2] overflow-hidden`}>
+                    <div key={data.id} className={` ${data.mainBg} relative xl:py-10 py-5 px-7 z-[2] overflow-hidden w-full lg:w-auto my-5 sm:my-0`}>
                         <div className=" h-80 w-80 border-[55px] rounded-full border-[#00000009] absolute -top-36 -right-32 rotate-45 z-[-1]"></div>
                         <div>
                             <button className={`py-1.5 px-6 bg-${data.btnBg}  mb-8 font-semibold text-gray-700`}>Gaming</button>
-                            <h2 className=" text-4xl font-semibold  text-gray-700 flex flex-col mb-10">{data.title1} <span>{data.title2}</span></h2>
+                            <h2 className=" xl:text-4xl text-2xl font-semibold  text-gray-700 flex flex-col xl:mb-10 mb-6">{data.title1} <span>{data.title2}</span></h2>
                             <ShopNowBtn />
                         </div>
                         <Image
                             src={data.img}
                             alt="Picture of the author"
-                            className=" h-60 w-60 absolute bottom-0 -right-10  z-[-1]"
+                            className=" xl:h-72 xl:w-80 w-52 h-40 absolute bottom-0 2xl:-right-20 xl:-right-32 -right-16  z-[-1]"
                         />
                     </div>
                 )
