@@ -9,7 +9,7 @@ import product2 from '../../assect/image/homePage/product/product5.webp'
 
 export default function Discount() {
     return (
-        <div className='bg-[#f8f8f8] py-8 z-[-100]'>
+        <div className='bg-[#f8f8f8] inline py-8 z-[-100]'>
             <div className='bg-[#C6EAFF] flex flex-col items-center justify-center lg:py-20 py-16 relative overflow-hidden z-[10] px-5 sm:px-0'>
 
                 <Image
